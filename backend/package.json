@@ -9,16 +9,23 @@
     "url": "https://github.com/matheusbzevedo"
   },
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "test": "cross-env NODE_ENV=test jest",
+    "secure-mode": "cross-env NODE_ENV=test jest --watchAll --verbose=false"
   },
   "dependencies": {
+    "celebrate": "^12.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^25.2.3",
     "knex": "^0.20.13",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
   }
 }
